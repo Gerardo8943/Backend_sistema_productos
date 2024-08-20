@@ -11,6 +11,9 @@ const app = express();
 
 app.use(cors());
 app.use(bodyParser.json());
+app.get('/', (req, res) => {
+    res.send('Backend is running');
+});
 
 // Cargar las rutas
 app.use('/api/products', productRoutes);
