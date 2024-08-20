@@ -9,8 +9,10 @@ const completePurchaseRoutes = require('./routes/completePurchaseRoutes');
 
 const app = express();
 
-app.use(cors());
+// Configura CORS para permitir solicitudes desde cualquier origen
+app.use(cors()); // Permite todos los orígenes por defecto
 app.use(bodyParser.json());
+
 app.get('/', (req, res) => {
     res.send('Backend is running');
 });
